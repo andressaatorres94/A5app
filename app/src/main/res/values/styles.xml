@@ -1,0 +1,29 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">#4085CD</item>
+        <item name="colorPrimaryDark">#1F74CC</item>
+        <item name="colorAccent">#69ACF1</item>
+    </style>
+
+    <style name="login" parent="AppTheme">
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#0F000000</item>
+        <item name="android:textColorHint">#BDBCBC</item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="formulario" parent="AppTheme" >
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:background">#3CA5A2A2</item>
+        <item name="android:textColorHint">#BDBDBD</item>
+        <item name="android:textStyle">italic</item>
+
+    </style>
+
+
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Formulario"
+    android:orientation="vertical"
+    android:background="@drawable/bg1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/tvtTitulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tvTitulo"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="#ffff"
+            />
+        <EditText
+            android:id="@+id/etNome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/etNome"
+            android:inputType="textPersonName"
+            android:layout_marginTop="20dp"
+            style="@style/formulario"/>
+
+        <EditText
+            android:id="@+id/etDesenvolvedor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/etDesenvolvedor"
+            android:inputType="textPersonName"
+            style="@style/formulario"/>
+
+        <EditText
+            android:id="@+id/etPublicadora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/etPublicadora"
+            android:inputType="text"
+            style="@style/formulario"/>
+
+        <EditText
+            android:id="@+id/etPlataforma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/etPlataforma"
+            android:inputType="text"
+            style="@style/formulario"/>
+
+        <EditText
+            android:id="@+id/etSerie"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/etSerie"
+            android:inputType="text"
+            style="@style/formulario"/>
+
+        <EditText
+            android:id="@+id/etGenero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/etGenero"
+            android:inputType="text"
+            style="@style/formulario"/>
+
+        <EditText
+            android:id="@+id/etLancamento"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/etLancamento"
+            android:inputType="number|date"
+            style="@style/formulario"/>
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="122dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="#46C4C3C5"
+            android:text="@string/btnSalvar"
+            android:textColor="#EFEFEF"
+            android:textSize="25sp" />
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="@string/btnVoltar"
+            android:textColor="#EFEFEF"
+            android:textSize="16sp"
+            android:background="#46C4C3C5"/>
+
+
+    </LinearLayout>
+</ScrollView>

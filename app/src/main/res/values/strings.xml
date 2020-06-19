@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">A5app</string>
+    <string name="edtLogin">Login</string>
+    <string name="edtSenha">Password</string>
+    <string name="btnlogin">Entrar</string>
+    <string name="tvPergunta">Ainda não tem conta?</string>
+    <string name="btnCadastrar">Cadastrar usuario</string>
+    <string name="title_activity_jogos">Jogos</string>
+
+    <string name="title_activity_cadastro">Cadastro</string>
+    <string name="tvTitulo">Cadastro de jogos</string>
+    <string name="etNome">Nome do jogo</string>
+    <string name="etPublicadora">Publicadora(s)</string>
+    <string name="etDesenvolvedor">"Desenvolvedora(s) "</string>
+    <string name="etSerie">Série</string>
+    <string name="etPlataforma">Plataforma(s)</string>
+    <string name="etLancamento">Lançamento</string>
+    <string name="etGenero">Gênero(s)</string>
+    <string name="btnSalvar">Salvar</string>
+    <string name="btnVoltar">Voltar</string>
+</resources>
