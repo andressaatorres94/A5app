@@ -1,5 +1,6 @@
 package com.example.a5app;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -30,11 +31,37 @@ public class NovoUsuario extends AppCompatActivity {
         imVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(NovoUsuario.this, Login.class);
-                startActivity(intent);
-                finish();
+            Intent intent = new Intent(NovoUsuario.this, Login.class);
+            startActivity(intent);
+            finish();
             }
         });
+
+
+    }
+    public void salvar(){
+        String nome = edtNome.getText().toString();
+        String email = edtEmail.getText().toString();
+        String senha = edtSenha.getText().toString();
+        String confirmar = edtConfirmar.getText().toString();
+
+        if(!nome.isEmpty() && !email.isEmpty() && !senha.isEmpty() && !confirmar.isEmpty()) {
+            AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+            alerta.setTitle("Atenção!");
+            alerta.setIcon(android.R.drawable.ic_dialog_alert);
+            alerta.setMessage("Novo usuário cadastrado.");
+            alerta.setNeutralButton("OK",null);
+            alerta.show();
+            finish();
+
+        } else{
+            AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+            alerta.setTitle("Atenção!");
+            alerta.setIcon(android.R.drawable.ic_dialog_alert);
+            alerta.setMessage("Preencha todos os campos corretamente.");
+            alerta.setNeutralButton("OK",null);
+            alerta.show();
+        }
 
 
     }
