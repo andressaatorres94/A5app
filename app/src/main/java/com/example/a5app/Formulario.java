@@ -42,6 +42,7 @@ public class Formulario extends AppCompatActivity {
                 //mudar para class lista qnd for criardo (APAGAR ESSE COMENTARIO )
                 Intent intent = new Intent(Formulario.this, Login.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -59,18 +60,17 @@ public class Formulario extends AppCompatActivity {
         if(!nome.isEmpty() && !desenvolvedora.isEmpty() && !publicadora.isEmpty() && !plataforma.isEmpty()&& !serie.isEmpty()&& !genero.isEmpty()
                 && !lancamento.isEmpty()) {
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
-            alerta.setTitle("Atenção!");
-            alerta.setIcon(android.R.drawable.ic_dialog_alert);
+            alerta.setIcon(android.R.drawable.ic_dialog_info);
             alerta.setMessage("Jogo cadastrado com sucesso.");
-            alerta.setNeutralButton("OK",null);
+            alerta.setPositiveButton("OK",null);
             alerta.show();
-            finish();
+
         } else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
             alerta.setTitle("Atenção!");
             alerta.setIcon(android.R.drawable.ic_dialog_alert);
             alerta.setMessage("Preencha todos os campos corretamente.");
-            alerta.setNeutralButton("OK",null);
+            alerta.setPositiveButton("OK",null);
             alerta.show();
         }
 

@@ -26,14 +26,20 @@ public class NovoUsuario extends AppCompatActivity {
         btnSalvar = (Button) findViewById(R.id.btnSalvarUsuario);
         imVoltar = (ImageButton) findViewById(R.id.imbVoltar);
 
-        //voltar
 
+        btnSalvar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                salvar();
+
+            }
+        });
+        //voltar
         imVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
             Intent intent = new Intent(NovoUsuario.this, Login.class);
             startActivity(intent);
-            finish();
             }
         });
 
@@ -47,10 +53,9 @@ public class NovoUsuario extends AppCompatActivity {
 
         if(!nome.isEmpty() && !email.isEmpty() && !senha.isEmpty() && !confirmar.isEmpty()) {
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
-            alerta.setTitle("Atenção!");
-            alerta.setIcon(android.R.drawable.ic_dialog_alert);
+            alerta.setIcon(android.R.drawable.ic_dialog_info);
             alerta.setMessage("Novo usuário cadastrado.");
-            alerta.setNeutralButton("OK",null);
+            alerta.setPositiveButton("OK",null);
             alerta.show();
             finish();
 
@@ -59,7 +64,7 @@ public class NovoUsuario extends AppCompatActivity {
             alerta.setTitle("Atenção!");
             alerta.setIcon(android.R.drawable.ic_dialog_alert);
             alerta.setMessage("Preencha todos os campos corretamente.");
-            alerta.setNeutralButton("OK",null);
+            alerta.setPositiveButton("OK",null);
             alerta.show();
         }
 
