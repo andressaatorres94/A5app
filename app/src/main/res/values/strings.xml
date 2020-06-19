@@ -1,13 +1,13 @@
 <resources>
-    <string name="app_name">A5app</string>
+    <string name="app_name">Games</string>
     <string name="edtLogin">Login</string>
     <string name="edtSenha">Password</string>
     <string name="btnlogin">Entrar</string>
     <string name="tvPergunta">Ainda não tem conta?</string>
     <string name="btnCadastrar">Cadastrar usuario</string>
-    <string name="title_activity_jogos">Jogos</string>
 
-    <string name="title_activity_cadastro">Cadastro</string>
+    //Formulario
+
     <string name="tvTitulo">Cadastro de jogos</string>
     <string name="etNome">Nome do jogo</string>
     <string name="etPublicadora">Publicadora(s)</string>
@@ -18,4 +18,12 @@
     <string name="etGenero">Gênero(s)</string>
     <string name="btnSalvar">Salvar</string>
     <string name="btnVoltar">Voltar</string>
+
+    //Novo Usuario
+    <string name="btnSalvarUsuario">Salvar</string>
+    <string name="edtSenhaUsuario">Senha</string>
+    <string name="edtNomeUsuario">Digite nome de usuário</string>
+    <string name="edtEmailUsuario">E-mail</string>
+    <string name="edtConfirmarSenha">Confirmar senha</string>
+
 </resources>

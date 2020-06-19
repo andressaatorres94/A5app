@@ -14,6 +14,7 @@ public class Formulario extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_formulario);
+
         edtNome = (EditText) findViewById(R.id.etNome);
         edtDesenvolvedora = (EditText) findViewById(R.id.etDesenvolvedor);
         edtPublicadora = (EditText) findViewById(R.id.etPublicadora);
