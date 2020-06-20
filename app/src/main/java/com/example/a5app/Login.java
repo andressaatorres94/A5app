@@ -33,7 +33,6 @@ public class Login extends AppCompatActivity {
         edtUsuario = (EditText) findViewById(R.id.edtLogin);
         edtSenha = (EditText) findViewById(R.id.edtSenha);
 
-
         auth = FirebaseAuth.getInstance();
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
@@ -69,35 +68,29 @@ public class Login extends AppCompatActivity {
 
     }
 
-    private void logar(){
+    private void logar() {
         String email = edtUsuario.getText().toString();
         String senha = edtSenha.getText().toString();
 
-        if( !email.isEmpty() && !senha.isEmpty() ){
+        if (!email.isEmpty() && !senha.isEmpty()) {
             auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if( !task.isSuccessful() ){
+                    if (!task.isSuccessful()) {
                         AlertDialog.Builder alerta = new AlertDialog.Builder(Login.this);
                         alerta.setTitle("Atenção!");
                         alerta.setIcon(android.R.drawable.ic_dialog_alert);
-                        alerta.setMessage("Usuário e/ou senha incorreto.");
-                        alerta.setPositiveButton("OK",null);
+                        alerta.setMessage("E-mail e/ou Senha incorreta.");
+                        alerta.setPositiveButton("OK", null);
                         alerta.show();
-                    } else{
-                        Intent intent = new Intent(Login.this, Formulario.class);
+
+                    } else {
+                        Intent intent = new Intent(Login.this, HomeJogos.class);
                         startActivity(intent);
                         finish();
                     }
                 }
             });
-        }else{
-            AlertDialog.Builder alerta = new AlertDialog.Builder(this);
-            alerta.setTitle("Atenção!");
-            alerta.setIcon(android.R.drawable.ic_dialog_alert);
-            alerta.setMessage("Preencha todos os campos corretamente.");
-            alerta.setPositiveButton("OK",null);
-            alerta.show();
         }
     }
 

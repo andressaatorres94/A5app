@@ -6,7 +6,9 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-
+/*
+* Criado por: Andressa Torres, Douglas Ghiraldello Rodrigues, Emmanuel Bitello.
+* */
 public class MainActivity extends AppCompatActivity {
 
     private ImageView imLogin;

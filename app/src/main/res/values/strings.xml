@@ -25,5 +25,6 @@
     <string name="edtNomeUsuario">Digite nome de usuário</string>
     <string name="edtEmailUsuario">E-mail</string>
     <string name="edtConfirmarSenha">Confirmar senha</string>
+    <string name="btnAdicionar">Adicionar novo jogo.</string>
 
 </resources>
