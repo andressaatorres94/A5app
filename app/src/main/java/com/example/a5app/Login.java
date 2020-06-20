@@ -77,11 +77,11 @@ public class Login extends AppCompatActivity {
             auth.signInWithEmailAndPassword(email, senha).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
-                    if( ! task.isSuccessful() ){
+                    if( !task.isSuccessful() ){
                         AlertDialog.Builder alerta = new AlertDialog.Builder(Login.this);
                         alerta.setTitle("Atenção!");
                         alerta.setIcon(android.R.drawable.ic_dialog_alert);
-                        alerta.setMessage("Usuário não encontrado.");
+                        alerta.setMessage("Usuário e/ou senha incorreto.");
                         alerta.setPositiveButton("OK",null);
                         alerta.show();
                     } else{
@@ -91,6 +91,13 @@ public class Login extends AppCompatActivity {
                     }
                 }
             });
+        }else{
+            AlertDialog.Builder alerta = new AlertDialog.Builder(this);
+            alerta.setTitle("Atenção!");
+            alerta.setIcon(android.R.drawable.ic_dialog_alert);
+            alerta.setMessage("Preencha todos os campos corretamente.");
+            alerta.setPositiveButton("OK",null);
+            alerta.show();
         }
     }
 

@@ -7,19 +7,33 @@
     android:orientation="vertical"
     android:background="@drawable/bg1"
     tools:context=".ListaJogos">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
-    <FrameLayout
-        android:id="@+id/fmLista"
-        android:layout_width="409dp"
-        android:layout_height="729dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="1dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="AQUI VAI A LISTA DE JOGOS"
-            android:textColor="#FFFFFF"
-            android:textSize="30sp"
-            />
-    </FrameLayout>
+        <ImageButton
+            android:id="@+id/ibVoltarInicio"
+            android:layout_width="45dp"
+            android:layout_height="35dp"
+            android:background="#1BB3B3B3"
+            android:src="@drawable/abc_vector_test" />
+
+        <ImageView
+            android:id="@+id/imLista"
+            android:layout_width="85dp"
+            android:layout_height="65dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="120dp"
+            android:src="@drawable/icon_jogos" />
+
+
+    </LinearLayout>
+
+
+    <ListView
+        android:id="@+id/lvJogos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 </LinearLayout>

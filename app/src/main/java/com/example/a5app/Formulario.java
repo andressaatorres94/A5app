@@ -49,7 +49,7 @@ public class Formulario extends AppCompatActivity {
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Formulario.this, Login.class);
+                Intent intent = new Intent(Formulario.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }

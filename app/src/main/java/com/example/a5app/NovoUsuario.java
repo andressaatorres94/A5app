@@ -55,6 +55,7 @@ public class NovoUsuario extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(NovoUsuario.this, Login.class);
                 startActivity(intent);
+                finish();
             }
         });
 
