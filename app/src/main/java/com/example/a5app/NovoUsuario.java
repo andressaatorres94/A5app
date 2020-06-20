@@ -57,7 +57,6 @@ public class NovoUsuario extends AppCompatActivity {
             alerta.setMessage("Novo usuário cadastrado.");
             alerta.setPositiveButton("OK",null);
             alerta.show();
-            finish();
 
         } else{
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
