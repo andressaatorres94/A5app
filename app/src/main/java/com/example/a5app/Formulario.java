@@ -3,6 +3,7 @@ package com.example.a5app;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,10 +11,17 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class Formulario extends AppCompatActivity {
     private EditText edtNome, edtDesenvolvedora, edtPublicadora, edtPlataforma;
     private EditText edtSerie, edtGenero, edtLancamento;
     private Button btnSalvar, btnVoltar;
+
+    private FirebaseDatabase database;
+    private DatabaseReference reference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +37,7 @@ public class Formulario extends AppCompatActivity {
         btnSalvar = (Button) findViewById(R.id.btnSalvar);
         btnVoltar = (Button) findViewById(R.id.btnVoltar);
 
+        //salvar
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,10 +45,10 @@ public class Formulario extends AppCompatActivity {
             }
         });
 
+        //voltar
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //mudar para class lista qnd for criardo (APAGAR ESSE COMENTARIO )
                 Intent intent = new Intent(Formulario.this, Login.class);
                 startActivity(intent);
                 finish();
@@ -59,10 +68,37 @@ public class Formulario extends AppCompatActivity {
 
         if(!nome.isEmpty() && !desenvolvedora.isEmpty() && !publicadora.isEmpty() && !plataforma.isEmpty()&& !serie.isEmpty()&& !genero.isEmpty()
                 && !lancamento.isEmpty()) {
+
+            Jogos jogos = new Jogos();
+
+            jogos.nomeJogo = nome;
+            jogos.desenvolvedora = desenvolvedora;
+            jogos.publicadora = publicadora;
+            jogos.plataforma = plataforma;
+            jogos.serie = serie;
+            jogos.genero = genero;
+            jogos.lancamento = lancamento;
+
+            database = FirebaseDatabase.getInstance();
+            reference = database.getReference();
+            reference.child("jogos").push().setValue(jogos);
+
             AlertDialog.Builder alerta = new AlertDialog.Builder(this);
             alerta.setIcon(android.R.drawable.ic_dialog_info);
             alerta.setMessage("Jogo cadastrado com sucesso.");
-            alerta.setPositiveButton("OK",null);
+            alerta.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+                @Override
+                public void onClick(DialogInterface dialog, int which) {
+                    edtNome.setText("");
+                    edtDesenvolvedora.setText("");
+                    edtPlataforma.setText("");
+                    edtPublicadora.setText("");
+                    edtGenero.setText("");
+                    edtLancamento.setText("");
+                    edtSerie.setText("");
+                }
+            });
+
             alerta.show();
 
         } else{

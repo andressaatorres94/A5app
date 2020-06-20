@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@drawable/bg1"
-    tools:context=".Jogos">
+    tools:context=".ListaJogos">
 
     <FrameLayout
         android:id="@+id/fmLista"

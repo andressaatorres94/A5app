@@ -4,7 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Jogos extends AppCompatActivity {
+public class ListaJogos extends AppCompatActivity {
+
+    public String id, nome, desenvolvedor, publicadora, plataforma, serie, genero, lancamento;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".NovoUsuario"></activity>
         <activity android:name=".Formulario" />
-        <activity android:name=".Jogos" />
+        <activity android:name=".ListaJogos" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
